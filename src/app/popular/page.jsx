@@ -5,7 +5,7 @@ const getPosts = async (page, limit) => {
   'use server';
   try {
     const res = await fetchBackendApiWrapper(
-      `/post/public?limit=${limit}&offset=${page}`,
+      `/post/public/popular?limit=${limit}&offset=${page}`,
       {
         method: "GET",
         cache: "no-store",
@@ -24,7 +24,7 @@ const getPosts = async (page, limit) => {
 };
 
 
-const Home = async () => {
+const PopularPage = async () => {
   const posts = await getPosts(0, 2);
 
   return (
@@ -34,4 +34,4 @@ const Home = async () => {
   );
 };
 
-export default Home;
+export default PopularPage;
