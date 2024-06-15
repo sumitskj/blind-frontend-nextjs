@@ -1,0 +1,36 @@
+"use client";
+
+import Link from "next/link";
+import { useEffect, useState } from "react";
+
+const RecentRoomsComponent = () => {
+  const [rooms, setRooms] = useState([]);
+  useEffect(() => {
+    setRooms(JSON.parse(window.localStorage.getItem("roomData")));
+  }, []);
+
+  return (
+    <div className="px-2 w-full">
+      <div className="flex flex-col border border-gray-200 justify-start items-start w-full relative px-6 py-4 gap-2 h-screen overflow-hidden bg-white rounded-lg">
+        {rooms && rooms.length > 0 && (
+          <div className="font-medium">Recent Rooms</div>
+        )}
+        <div className="flex flex-col justify-start items-start w-full relative gap-1">
+          {rooms?.map((r, ind) => {
+            return (
+              <Link
+                href={`/room/${r.id}/${r.password}`}
+                key={ind}
+                className="truncate w-full text-blue-600 font-medium text-sm hover:underline cursor-pointer"
+              >
+                {r.title}
+              </Link>
+            );
+          })}
+        </div>
+      </div>
+    </div>
+  );
+};
+
+export default RecentRoomsComponent;

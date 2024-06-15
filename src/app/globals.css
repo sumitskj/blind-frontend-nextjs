@@ -1,33 +1,98 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;300;400;500&family=Rubik:wght@300;400&family=Montserrat:wght@100;200;300;400;500;600;700;800&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Rubik+Mono+One&family=Playwrite+IS:wght@100..400&display=swap");
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
-  }
-}
-
 body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+  margin: 0;
+  font-family: 'Poppins', -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
 }
 
-@layer utilities {
-  .text-balance {
-    text-wrap: balance;
-  }
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+.no-scroll {
+  overflow-x: auto; /* Allow horizontal scrolling */
+  -ms-overflow-style: none; /* Internet Explorer 10+ */
+  scrollbar-width: none; /* Firefox */
+}
+
+.no-scroll::-webkit-scrollbar {
+  display: none; /* Safari and Chrome */
+}
+
+
+/* Paragraph styles */
+.post-content p {
+  margin-bottom: 1rem;
+}
+
+.post-content p strong {
+  font-weight: bold;
+}
+
+.post-content p em {
+  font-style: italic;
+}
+
+.post-content p u {
+  text-decoration: underline;
+}
+
+.post-content p del {
+  text-decoration: line-through;
+}
+
+.post-content p code {
+  font-family: "Courier New", monospace;
+  background-color: #f4f4f4;
+  padding: 1rem;
+  border-radius: 4px;
+}
+
+/* Blockquote styles */
+.post-content blockquote {
+  background-color: #f5f5f4;
+  border-left: 5px solid #ccc;
+  font-family: "Hoefler Text", Georgia, serif;
+  padding: 1rem;
+  margin-bottom: 1rem;
+}
+
+/* List styles */
+.post-content ul,
+ol {
+  margin-bottom: 1rem;
+  list-style-position: inside;
+}
+
+.post-content ul li {
+  list-style-type: disc;
+}
+
+.post-content ol li {
+  list-style-type: decimal;
+}
+
+/* Pre and code styles */
+.post-content pre {
+  background-color: #f4f4f4;
+  padding: 8px 16px 8px 16px;
+  border-radius: 4px;
+  overflow-x: auto;
+}
+
+.post-content pre code {
+  font-family: "Courier New", monospace;
+}
+
+.post-content a {
+  text-decoration: underline;
+  color: #3b82f6;
 }
