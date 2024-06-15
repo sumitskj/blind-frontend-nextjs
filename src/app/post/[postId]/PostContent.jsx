@@ -2,10 +2,12 @@ import { format } from "timeago.js";
 import Image from "next/image";
 import CopyShareLinkComponent from "@/components/CopyShareLinkComponent";
 import GoBack from "@/components/GoBack";
+import UpdatePostStorage from "./UpdatePostStorage";
 
 const PostContent = ({ data }) => {
   return (
     <div className="flex w-full flex-col justify-start items-start relative p-6 gap-2 border border-gray-200 rounded-t-lg">
+      <UpdatePostStorage data={data} />
       <div className="flex justify-start items-center w-full relative gap-2">
         <GoBack />
         <Image

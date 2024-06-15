@@ -2,9 +2,9 @@
 
 const { useEffect } = require("react");
 
-const UpdateRoomStorage = ({ data }) => {
+const UpdatePostStorage = ({ data }) => {
   useEffect(() => {
-    let roomStorage = JSON.parse(localStorage.getItem("recentRooms"));
+    let roomStorage = JSON.parse(localStorage.getItem("recentPosts"));
     if (roomStorage) {
       const tmp = roomStorage.find((x) => x.id === data.id);
       if (!tmp) {
@@ -13,9 +13,9 @@ const UpdateRoomStorage = ({ data }) => {
     } else {
       roomStorage = [data];
     }
-    localStorage.setItem("recentRooms", JSON.stringify(roomStorage));
+    localStorage.setItem("recentPosts", JSON.stringify(roomStorage));
   }, []);
   return <></>;
 };
 
-export default UpdateRoomStorage;
+export default UpdatePostStorage;
