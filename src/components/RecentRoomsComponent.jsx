@@ -7,8 +7,8 @@ const RecentRoomsComponent = () => {
   const [rooms, setRooms] = useState([]);
   const [posts, setPosts] = useState([]);
   useEffect(() => {
-    setRooms(JSON.parse(window.localStorage.getItem("recentRooms")).slice(0, 10));
-    setPosts(JSON.parse(window.localStorage.getItem("recentPosts")).slice(0, 10));
+    setRooms(JSON.parse(window.localStorage.getItem("recentRooms"))?.slice(0, 10));
+    setPosts(JSON.parse(window.localStorage.getItem("recentPosts"))?.slice(0, 10));
   }, []);
 
   return (
