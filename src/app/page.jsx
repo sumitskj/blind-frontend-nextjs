@@ -1,37 +1,57 @@
+'use client';
 import { fetchBackendApiWrapper } from "@/utils/apiWrapper";
 import ScrollingPagination from "@/components/ScrollingPagination";
+import { useEffect, useState } from "react";
+import LoadingPageSkeleton from "@/components/LoadingPageSkeleton";
 
-const getPosts = async (page, limit) => {
-  'use server';
-  try {
-    const res = await fetchBackendApiWrapper(
-      `/post/public?limit=${limit}&offset=${page}`,
-      {
-        method: "GET",
-        cache: "no-store",
-      },
-      null
-    );
-    if (res && res.ok) {
-      const posts = await res.json();
-      return posts;
+const HomePage = () => {
+  const [posts, setPosts] = useState([]);
+  const [loading, setLoading] = useState(true);
+
+  useEffect(() => {
+    initPage();
+  }, []);
+
+  const getPosts = async (page, limit) => {
+    try {
+      const res = await fetchBackendApiWrapper(
+        `/post/public?limit=${limit}&offset=${page}`,
+        {
+          method: "GET",
+          cache: "no-store",
+        },
+        null
+      );
+      if (res && res.ok) {
+        const posts = await res.json();
+        return posts;
+      }
+      throw new Error();
+    } catch (err) {
+      console.error(err);
+      return [];
     }
-    throw new Error();
-  } catch (err) {
-    console.error(err);
-    return [];
-  }
-};
+  };
 
-
-const Home = async () => {
-  const posts = await getPosts(0, 2);
+  const initPage = async () => {
+    setLoading(true);
+    const data = await getPosts(0, 4);
+    setPosts(data);
+    setLoading(false);
+  };
 
   return (
     <div className="rounded-lg w-full h-dvh overflow-y-auto">
-      <ScrollingPagination initialItems={posts} getData={getPosts} />
+      {!loading && (
+        <ScrollingPagination initialItems={posts} getData={getPosts} />
+      )}
+      {loading && (
+        <div className="w-full flex justify-center items-center bg-white h-dvh">
+          <LoadingPageSkeleton />
+        </div>
+      )}
     </div>
   );
 };
 
-export default Home;
+export default HomePage;

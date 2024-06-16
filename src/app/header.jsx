@@ -12,15 +12,15 @@ const HeaderComponent = () => {
   const pathname = usePathname();
 
   return (
-    <div className="fixed w-full bg-white shadow-md border-b border-gray-300 z-10">
-      <div className="w-full flex justify-between items-center relative bg-green-600 py-2 px-6">
+    <div className="fixed w-full bg-lime-500 shadow-md border-b border-gray-300 z-10">
+      <div className="w-full flex justify-between items-center relative bg-lime-500 py-2 px-6">
         <Image src="/assets/GK1200x630.png" alt="logo" width={112} height={1} />
         <div className="font-rubikMono flex justify-start items-center gap-6">
           <Link
             href={"/"}
             className={`${
               pathname === "/" ? "bg-black text-white" : "bg-white text-black"
-            } rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1`}
+            } rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1 hover:shadow-[-1px_1px_1px_0px_black] shadow-[-1px_2px_3px_0px_black]`}
           >
             <HomeRoundedIcon fontSize="small" />
             HOME
@@ -31,7 +31,7 @@ const HeaderComponent = () => {
               pathname.includes("/popular")
                 ? "bg-black text-white"
                 : "bg-white text-black"
-            } rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1`}
+            } rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1 hover:shadow-[-1px_1px_1px_0px_black] shadow-[-1px_2px_3px_0px_black]`}
           >
             <TrendingUpRoundedIcon fontSize="small" />
             POPULAR
@@ -42,7 +42,7 @@ const HeaderComponent = () => {
               pathname === "/constitution"
                 ? "bg-black text-white"
                 : "bg-white text-black"
-            } rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1`}
+            } rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1 hover:shadow-[-1px_1px_1px_0px_black] shadow-[-1px_2px_3px_0px_black]`}
           >
             <AccountBalanceRoundedIcon fontSize="small" />
             OUR CONSTITUTION

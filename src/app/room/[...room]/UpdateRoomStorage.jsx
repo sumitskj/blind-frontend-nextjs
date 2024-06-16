@@ -8,7 +8,7 @@ const UpdateRoomStorage = ({ data }) => {
     if (roomStorage) {
       const tmp = roomStorage.find((x) => x.id === data.id);
       if (!tmp) {
-        roomStorage = [...roomStorage, data];
+        roomStorage = [data, ...roomStorage];
       }
     } else {
       roomStorage = [data];

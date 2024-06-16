@@ -4,16 +4,16 @@ const { useEffect } = require("react");
 
 const UpdatePostStorage = ({ data }) => {
   useEffect(() => {
-    let roomStorage = JSON.parse(localStorage.getItem("recentPosts"));
-    if (roomStorage) {
-      const tmp = roomStorage.find((x) => x.id === data.id);
+    let postStorage = JSON.parse(localStorage.getItem("recentPosts"));
+    if (postStorage) {
+      const tmp = postStorage.find((x) => x.id === data.id);
       if (!tmp) {
-        roomStorage = [...roomStorage, data];
+        postStorage = [data, ...postStorage];
       }
     } else {
-      roomStorage = [data];
+      postStorage = [data];
     }
-    localStorage.setItem("recentPosts", JSON.stringify(roomStorage));
+    localStorage.setItem("recentPosts", JSON.stringify(postStorage));
   }, []);
   return <></>;
 };

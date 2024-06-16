@@ -8,8 +8,9 @@ import "react-toastify/ReactToastify.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata = {
-  title: "nUoSER",
-  description: "Open Forum without any Logins",
+  title: "BolDena",
+  description:
+    "Open Forum without any Logins. Be completely anonymous while creating any post. Create private discussion posts for true feedbacks.",
 };
 
 export default function RootLayout({ children }) {

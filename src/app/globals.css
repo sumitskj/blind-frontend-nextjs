@@ -99,7 +99,7 @@ ol {
 }
 
 .post-content-wrapper {
-  max-height: 240px;
+  max-height: 220px;
   overflow: hidden;
   position: relative;
 }
