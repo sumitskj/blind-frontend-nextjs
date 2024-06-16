@@ -7,7 +7,7 @@ const CopyRoomLink = ({ link }) => {
   const copyShareUrl = () => {
     let t = `${window.location.origin}${link}`;
     navigator.clipboard.writeText(t);
-    sendSucessNotification({ message: `Link Copied : ${t}` });
+    sendSucessNotification({ message: `Link Copied` });
   };
 
   return (
