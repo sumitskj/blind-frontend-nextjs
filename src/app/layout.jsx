@@ -27,7 +27,7 @@ export default function RootLayout({ children }) {
               <RecentRoomsComponent />
             </div>
             <div className="w-full col-span-2">{children}</div>
-            <div className="w-full col-span-1 h-full px-2">
+            <div className="hidden lg:block w-full col-span-1 h-full px-2">
               <div className="relative bg-gradient-to-b from-white to-lime-100 w-full h-[86vh] rounded-lg shadow-lg p-4 flex flex-col justify-start items-center"
               >
                 <div className="relative font-poppins font-extrabold text-center w-full text-2xl py-10 z-20">

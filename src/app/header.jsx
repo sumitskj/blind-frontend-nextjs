@@ -17,7 +17,7 @@ export const HeaderComponent = () => {
   const pathname = usePathname();
 
   return (
-    <div className="hidden lg:block fixed w-full bg-lime-400 shadow-md border-b border-gray-300 z-10">
+    <div className="hidden fixed w-full bg-lime-400 shadow-md border-b border-gray-300 z-10 h-20 lg:flex flex-col justify-center items-start">
       <div className="w-full flex justify-between items-center relative bg-lime-400 py-2 px-6">
         <Link href={"/"}>
           <Image
@@ -173,9 +173,10 @@ export const MobileHeaderComponent = () => {
   };
 
   return (
-    <div className="fixed flex flex-col justify-between items-center lg:hidden w-full shadow-md border-b border-gray-300 z-10">
-      <div className="w-full flex justify-between items-center relative bg-lime-500 py-2 px-6">
-        <Image src="/assets/fulllogo.svg" alt="logo" width={112} height={1} />
+    <div className="fixed flex flex-col justify-center items-start lg:hidden w-full shadow-md border-b border-gray-300 z-10">
+      <div className="w-full flex justify-between items-center relative bg-lime-500 py-2 px-6 h-20">
+        <Image src="/assets/fulllogo.svg" alt="logo" width={180}
+            height={100} />
         <div
           onClick={() => setOpenMobileMenu(true)}
           className="lg:hidden cursor-pointer text-white"
