@@ -41,7 +41,7 @@ const PopularPage = () => {
   };
 
   return (
-    <div className="rounded-lg w-full h-dvh overflow-y-auto">
+    <div className="rounded-lg w-full h-[86vh] overflow-y-auto">
       {!loading && (
         <ScrollingPagination initialItems={posts} getData={getPosts} />
       )}

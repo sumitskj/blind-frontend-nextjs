@@ -1,6 +1,6 @@
 const Constitution = () => {
   return (
-    <div className="rounded-lg w-full h-dvh overflow-y-auto bg-white px-6 pt-6 pb-20 shadow-lg">
+    <div className="rounded-lg w-full h-[86vh] overflow-y-auto bg-white px-6 pt-6 pb-20 shadow-lg">
       <h1 className="text-3xl font-bold pb-10 underline text-center">Constitution of Boldena.com</h1>
       <p className="pb-6">
         Boldena.com is dedicated to fostering an open, honest, and inclusive

@@ -77,8 +77,8 @@ const CreatePost = () => {
   };
 
   return (
-    <div className="no-scroll w-full px-6 pt-4 pb-10 h-dvh overflow-y-auto border border-gray-200 rounded-lg bg-white">
-      <div className="w-full flex flex-col justify-start items-center gap-8 h-dvh">
+    <div className="no-scroll w-full px-6 pt-4 pb-10 h-[86vh] overflow-y-auto border border-gray-200 rounded-lg bg-white">
+      <div className="w-full flex flex-col justify-start items-center gap-8 h-full">
         <div className="w-full flex justify-start items-center">
           <GoBack />
         </div>
