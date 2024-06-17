@@ -13,7 +13,7 @@ const RecentRoomsComponent = () => {
   }, []);
 
   return (
-    <div className="px-2 w-full">
+    <div className="px-2 w-full ">
       <div className="flex flex-col border border-gray-200 justify-start items-start w-full relative px-6 py-4 h-[86vh] overflow-hidden bg-gradient-to-b from-white to-lime-100 rounded-lg gap-8">
         <Link
           href={"/post/submit"}
