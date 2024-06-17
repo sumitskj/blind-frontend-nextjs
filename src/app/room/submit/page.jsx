@@ -83,10 +83,10 @@ const CreateRoom = () => {
           <GoBack />
         </div>
         <div className="flex justify-start items-start w-full relative font-bold text-2xl">
-          Create Room
+          Create Private Discussion Post
         </div>
         <div className="text-sm text-gray-500 w-full">
-          This will create a private room, which only the people have the URL
+          This will create a private post, which only the people have the URL
           can access it
         </div>
         <div className="flex flex-col justify-start items-stretch w-full gap-1">
@@ -116,7 +116,7 @@ const CreateRoom = () => {
                 <div>Creating</div>
               </div>
             ) : (
-              "Create Room"
+              "Create Post"
             )}
           </button>
         </div>

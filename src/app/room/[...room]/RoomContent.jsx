@@ -15,7 +15,7 @@ const RoomContent = ({ data }) => {
       </div>
       <div className="flex justify-start items-center w-full relative gap-2">
         <Image
-          src="/assets/GK1200x630.png"
+          src="/assets/greenOnlylogo.svg"
           alt="logo"
           className="rounded-full"
           width={24}

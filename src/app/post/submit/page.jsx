@@ -83,11 +83,11 @@ const CreatePost = () => {
           <GoBack />
         </div>
         <div className="flex justify-start items-start w-full relative font-bold text-2xl">
-          Create Post
+          Create Public Post
         </div>
         <div className="text-sm text-gray-500 w-full">
           This will be a public post. If you want to create a invite only post
-          then create a room.
+          then create a private discussion post.
         </div>
         <div className="flex flex-col justify-start items-stretch w-full gap-1">
           <input
