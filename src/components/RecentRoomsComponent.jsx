@@ -14,7 +14,7 @@ const RecentRoomsComponent = () => {
 
   return (
     <div className="px-2 w-full ">
-      <div className="flex flex-col border border-gray-200 justify-start items-start w-full relative px-6 py-4 h-[86vh] overflow-hidden bg-gradient-to-b from-white to-lime-100 rounded-lg gap-8">
+      <div className="flex flex-col border border-gray-200 justify-start items-start w-full relative px-6 py-4 h-[86vh] overflow-hidden bg-gradient-to-b from-white to-white rounded-lg gap-8">
         <Link
           href={"/post/submit"}
           className="bg-white border border-black  rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1 hover:bg-slate-100"

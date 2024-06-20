@@ -17,8 +17,8 @@ export const HeaderComponent = () => {
   const pathname = usePathname();
 
   return (
-    <div className="hidden fixed w-full bg-lime-400 shadow-md border-b border-gray-300 z-10 h-20 lg:flex flex-col justify-center items-start">
-      <div className="w-full flex justify-between items-center relative bg-lime-400 py-2 px-6">
+    <div className="hidden fixed w-full bg-white shadow-md border-b border-gray-300 z-10 h-20 lg:flex flex-col justify-center items-start">
+      <div className="w-full flex justify-between items-center relative bg-white py-2 px-6">
         <Link href={"/"}>
           <Image
             src="/assets/fulllogo.svg"
@@ -174,12 +174,12 @@ export const MobileHeaderComponent = () => {
 
   return (
     <div className="fixed flex flex-col justify-center items-start lg:hidden w-full shadow-md border-b border-gray-300 z-10">
-      <div className="w-full flex justify-between items-center relative bg-lime-500 py-2 px-6 h-20">
+      <div className="w-full flex justify-between items-center relative bg-white py-2 px-6 h-20">
         <Image src="/assets/fulllogo.svg" alt="logo" width={180}
             height={100} />
         <div
           onClick={() => setOpenMobileMenu(true)}
-          className="lg:hidden cursor-pointer text-white"
+          className="lg:hidden cursor-pointer "
         >
           <MenuIcon color="inherit" />
         </div>
@@ -196,7 +196,7 @@ export const MobileBottomNavbar = () => {
   const pathname = usePathname();
   return (
     <div
-      className={`flex lg:hidden bottom-0 justify-between items-center w-full px-6 py-2 bg-lime-500 z-10`}
+      className={`flex lg:hidden bottom-0 justify-between items-center w-full px-6 py-2 bg-white z-10`}
     >
       <Link
         href={"/"}
