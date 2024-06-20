@@ -11,7 +11,7 @@ const inter = Inter({ subsets: ["latin"] });
 export const metadata = {
   title: "BolDena",
   description:
-    "Open Forum without any Logins. Be completely anonymous while creating any post. Create private discussion posts for true feedbacks.",
+    "Boldena is an open Forum without any Logins. Be completely anonymous while creating any post. Create private discussion posts for true feedbacks.",
   metadataBase: new URL("https://boldena.com"),
 };
 
