@@ -56,7 +56,7 @@ export async function generateSitemaps() {
 export default async function sitemap({ id }) {
   // Google's limit is 50,000 URLs per sitemap
   const links = await getLinksForSitemap(id);
-  return links.links.map((l) => ({
+  return links.map((l) => ({
     url: `${EXTERNAL_DATA_URL}${l.url}`,
     lastModified: l.lastModified,
   }));
