@@ -4,4 +4,4 @@ User-agent: *
 Allow: /
 
 Sitemap: https://boldena.com/sitemap.xml
-Sitemap: https://boldena.com/server-sitemap.xml
+Sitemap: https://boldena.com/sitemap/*
