@@ -1,0 +1,8 @@
+# public/robots.txt
+
+User-agent: *
+Allow: /
+
+Sitemap: https://boldena.com/sitemap/1.xml
+Sitemap: https://boldena.com/sitemap/2.xml
+Sitemap: https://boldena.com/sitemap/3.xml
