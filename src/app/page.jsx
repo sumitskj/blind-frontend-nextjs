@@ -46,7 +46,7 @@ const HomePage = () => {
 
   const initPage = async () => {
     setLoading(true);
-    const data = await getPosts(0, 4);
+    const data = await getPosts(0, 10);
     setPosts(data);
     setLoading(false);
   };

@@ -9,7 +9,7 @@ const ScrollingPagination = ({ initialItems, getData }) => {
   const [currentPage, setCurrentPage] = useState(1); // Start from the second page as first is already fetched
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(true);
-  const limit = 4;
+  const limit = 10;
   const observer = useRef(null);
   const lastItemRef = useCallback((node) => {
     if (observer.current) observer.current.disconnect();
