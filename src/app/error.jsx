@@ -5,7 +5,7 @@ import Link from "next/link";
 const ErrorPage = ({error, reset}) => {
   return (
     <div className="w-full flex flex-col justify-center items-center pt-24 gap-6">
-      <div className="text-center w-full text-xl font-medium">
+      <div className="text-center w-full text-xl font-medium ">
         {`Oops! Something went wrong ${JSON.stringify(error)}`}
       </div>
       <Link
