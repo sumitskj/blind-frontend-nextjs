@@ -29,7 +29,7 @@ const RecentRoomsComponent = () => {
           <AddRoundedIcon fontSize="small" className="text-white" />
           PRIVATE DISCUSSION POST
         </Link>
-        <div>
+        <div className="w-full">
           {rooms && rooms.length > 0 && (
             <div className="font-medium">Recently Viewed Private Posts</div>
           )}
