@@ -13,6 +13,7 @@
     "@emotion/styled": "^11.11.5",
     "@mui/icons-material": "^5.15.19",
     "@mui/material": "^5.15.19",
+    "@next/third-parties": "^14.2.5",
     "axios": "^1.7.2",
     "axios-retry": "^4.4.0",
     "draft-js": "^0.11.7",

@@ -5,6 +5,7 @@ import { ToastifyNotification } from "@/components/NotificationComponent";
 import RecentRoomsComponent from "@/components/RecentRoomsComponent";
 import "react-toastify/ReactToastify.css";
 import Image from "next/image";
+import { GoogleAnalytics } from '@next/third-parties/google'
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -52,6 +53,7 @@ export default function RootLayout({ children }) {
           <ToastifyNotification />
         </div>
       </body>
+      <GoogleAnalytics gaId="G-G3NLQGJW6V" />
     </html>
   );
 }
