@@ -8,7 +8,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { headers } from "next/headers";
 import WhyToUse from "@/components/WhyToUser";
 import GoogleAdsense from "@/components/GoogleAdsense";
-import Footer from "@/components/Footer";
+// import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
