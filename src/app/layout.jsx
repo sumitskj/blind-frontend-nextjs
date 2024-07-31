@@ -8,6 +8,7 @@ import { GoogleAnalytics } from '@next/third-parties/google'
 import { headers } from "next/headers";
 import WhyToUse from "@/components/WhyToUser";
 import GoogleAdsense from "@/components/GoogleAdsense";
+import Footer from "@/components/Footer";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -48,9 +49,10 @@ export default function RootLayout({ children }) {
           <MobileBottomNavbar />
           <ToastifyNotification />
         </div>
+        {/* <Footer /> */}
       </body>
       <GoogleAnalytics gaId="G-G3NLQGJW6V" />
-      <GoogleAdsense pId={'ca-pub-1674144837923693'} />
+      <GoogleAdsense pId={'1674144837923693'} />
     </html>
   );
 }
