@@ -4,8 +4,10 @@ import { HeaderComponent, MobileBottomNavbar, MobileHeaderComponent } from "./he
 import { ToastifyNotification } from "@/components/NotificationComponent";
 import RecentRoomsComponent from "@/components/RecentRoomsComponent";
 import "react-toastify/ReactToastify.css";
-import Image from "next/image";
 import { GoogleAnalytics } from '@next/third-parties/google'
+import { headers } from "next/headers";
+import WhyToUse from "@/components/WhyToUser";
+import GoogleAdsense from "@/components/GoogleAdsense";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -17,43 +19,38 @@ export const metadata = {
 };
 
 export default function RootLayout({ children }) {
+  const headersList = headers();
+  const pathname = headersList.get('x-pathname');
+
   return (
     <html lang="en">
       <body className={inter.className}>
-        <div className="font-rubik w-full relative flex flex-col h-screen justify-start items-start gap-0 bg-indigo-50">
+        <div className="font-rubik w-full relative flex h-screen flex-col justify-start items-start gap-0 bg-indigo-50">
           <HeaderComponent />
           <MobileHeaderComponent />
-          <div className="grid grid-cols-1 lg:grid-cols-4 overflow-y-auto w-full justify-between items-start relative pt-24">
-            <div className="hidden col-span-1 w-full lg:flex flex-col justify-start items-center pb-10">
+          <div className="grid grid-cols-1 lg:grid-cols-4 w-full justify-between items-start relative overflow-hidden pt-24">
+            <div
+              className="hidden col-span-1 w-full lg:flex flex-col justify-start items-center pb-10 px-2"
+              style={{ height: "calc(100vh - 4rem)" }}
+            >
               <RecentRoomsComponent />
             </div>
             <div className="w-full col-span-2">{children}</div>
-            <div className="hidden lg:block w-full col-span-1 h-full px-2">
-              <div className="relative bg-gradient-to-b from-white to-lime-100 w-full h-[86vh] rounded-lg shadow-lg p-4 flex flex-col justify-start items-center"
+            {!pathname.includes("article") && (
+              <div
+                className="hidden lg:block w-full col-span-1 px-2 pb-10"
+                style={{ height: "calc(100vh - 4rem)" }}
               >
-                <div className="relative font-poppins font-extrabold text-center w-full text-2xl py-10 z-20">
-                  WHY USE BOLDENA?
-                </div>
-                <div className="absolute inset-0 top-20 left-10 opacity-30 z-10"><Image src="/assets/speaker.svg" alt="logo" width={180} height={100} /></div>
-                <div className="font-acme w-full text-xl font-bold text-center text-blue-800 z-20">
-                  <ul className="list-inside list-disc">
-                    <li className="py-6">NO LOGINS EVER</li>
-                    <li className="py-6">BE ANONYMOUS ALWAYS AND SHARE YOUR THOUGHTS</li>
-                    <li className="py-6">
-                      CREATE PRIVATE SHAREABLE DISCUSSION POSTS TO GET HONEST
-                      FEEDBACKS FROM YOUR COLLEAGUES
-                    </li>
-                    <li>EXPRESS YOURSELF OR ASK ANY QUESTION WITHOUT THINKING OF HOW PEOPLE WILL JUDGE YOU.</li>
-                  </ul>
-                </div>
+                <WhyToUse />
               </div>
-            </div>
+            )}
           </div>
           <MobileBottomNavbar />
           <ToastifyNotification />
         </div>
       </body>
       <GoogleAnalytics gaId="G-G3NLQGJW6V" />
+      <GoogleAdsense pId={'ca-pub-1674144837923693'} />
     </html>
   );
 }

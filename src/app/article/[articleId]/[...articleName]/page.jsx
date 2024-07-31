@@ -63,7 +63,7 @@ const ArticlePage = async ({ params }) => {
 
   return (
     <>
-      <div className="no-scroll w-full px-2 pb-10 h-dvh overflow-y-auto">
+      <div className="no-scroll w-full px-2 pb-10 overflow-y-auto" style={{"height" : "calc(100vh - 4rem)"}}>
         <div className="w-full bg-white  flex flex-col justify-start items-center gap-1">
           <ArticleContent data={articleData} />
           <CommentSection entityId={params.articleId} />

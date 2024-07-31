@@ -3,12 +3,12 @@ import Image from "next/image";
 import CopyShareLinkComponent from "@/components/CopyShareLinkComponent";
 import GoBack from "@/components/GoBack";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
-// import UpdatePostStorage from "./UpdatePostStorage";
+import UpdateArticleStorage from "./UpdateArticleStorage";
 
 const ArticleContent = ({ data }) => {
   return (
     <div className="flex w-full flex-col justify-start items-start relative p-6 gap-2 border border-gray-200 rounded-t-lg">
-      {/* <UpdatePostStorage data={data} /> */}
+      <UpdateArticleStorage data={data} />
       <div className="flex justify-start items-center w-full relative gap-2">
         <GoBack />
         <Image
@@ -18,7 +18,7 @@ const ArticleContent = ({ data }) => {
           width={24}
           height={24}
         />
-        <div cl assName="text-xs font-semibold">
+        <div className="text-xs font-semibold">
           /public
         </div>
         <div className="font-bold text-gray-600 text-center items-center">
@@ -29,7 +29,7 @@ const ArticleContent = ({ data }) => {
         </div>
       </div>
       <div className="flex justify-between items-center w-full relative">
-        <div className="text-lg font-semibold">{data.title}</div>
+        <h1 className="text-lg font-semibold">{data.title}</h1>
       </div>
       <div className="flex justify-between items-center w-full relative">
         <div className="text-black rounded-3xl w-full">

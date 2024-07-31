@@ -60,7 +60,7 @@ const RoomPage = async ({ params }) => {
   const roomData = await getRoomData(params.room[0], params.room[1]);
 
   return (
-    <div className="no-scroll w-full px-2 pb-10 h-dvh overflow-y-auto">
+    <div className="no-scroll w-full px-2 pb-10 overflow-y-auto" style={{"height" : "calc(100vh - 4rem)"}}>
       <div className="w-full bg-white  flex flex-col justify-start items-center gap-1">
         <RoomContent data={roomData} />
         <CommentSection entityId={params.room[0]} />
