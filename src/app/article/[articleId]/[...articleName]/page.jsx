@@ -1,6 +1,7 @@
 import { fetchBackendApiWrapper } from "@/utils/apiWrapper";
 import CommentSection from "@/components/CommentSection";
 import ArticleContent from "./ArticleContent";
+import AdHorizontalComponent from "@/components/AdHorizontalComponent";
 
 const getArticleData = async (articleId) => {
   try {
@@ -66,7 +67,9 @@ const ArticlePage = async ({ params }) => {
       <div className="no-scroll w-full px-2 pb-10 overflow-y-auto" style={{"height" : "calc(100vh - 4rem)"}}>
         <div className="w-full bg-white  flex flex-col justify-start items-center gap-1">
           <ArticleContent data={articleData} />
+          <AdHorizontalComponent />
           <CommentSection entityId={params.articleId} />
+          <AdHorizontalComponent />
         </div>
       </div>
     </>

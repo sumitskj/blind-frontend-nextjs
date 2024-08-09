@@ -1,14 +1,20 @@
 import { Inter } from "next/font/google";
 import "./globals.css";
-import { HeaderComponent, MobileBottomNavbar, MobileHeaderComponent } from "./header";
+import {
+  HeaderComponent,
+  MobileBottomNavbar,
+  MobileHeaderComponent,
+} from "./header";
 import { ToastifyNotification } from "@/components/NotificationComponent";
 import RecentRoomsComponent from "@/components/RecentRoomsComponent";
 import "react-toastify/ReactToastify.css";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import { GoogleAnalytics } from "@next/third-parties/google";
 import { headers } from "next/headers";
 import WhyToUse from "@/components/WhyToUser";
 import GoogleAdsense from "@/components/GoogleAdsense";
 import Footer from "@/components/Footer";
+import AdSquareComponent from "@/components/AdSquareComponent";
+import AdHorizontalComponent from "@/components/AdHorizontalComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -21,7 +27,7 @@ export const metadata = {
 
 export default function RootLayout({ children }) {
   const headersList = headers();
-  const pathname = headersList.get('x-pathname');
+  const pathname = headersList.get("x-pathname");
 
   return (
     <html lang="en">
@@ -37,17 +43,27 @@ export default function RootLayout({ children }) {
               <RecentRoomsComponent />
             </div>
             <div className="w-full col-span-2">{children}</div>
-            {!pathname.includes("article") && (
+            {/* {!pathname.includes("article") && (
               <div
                 className="hidden lg:block w-full col-span-1 px-2 pb-10"
                 style={{ height: "calc(100vh - 4rem)" }}
               >
                 <WhyToUse />
               </div>
-            )}
+            )} */}
+            <div
+              className="hidden lg:flex flex-col justify-start items-start w-full col-span-1 px-2 pb-10 gap-2"
+              style={{ height: "calc(100vh - 4rem)" }}
+            >
+              <AdSquareComponent />
+              <AdSquareComponent />
+            </div>
           </div>
           <MobileBottomNavbar />
           <ToastifyNotification />
+        </div>
+        <div className="w-full relative">
+          <AdHorizontalComponent />
         </div>
         <div className="w-full relative">
           <Footer />
