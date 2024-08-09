@@ -56,6 +56,7 @@ export default function RootLayout({ children }) {
               style={{ height: "calc(100vh - 4rem)" }}
             >
               <AdSquareComponent adSlot={'8728353163'} />
+              <AdSquareComponent adSlot={'6268984431'} />
             </div>
           </div>
           <MobileBottomNavbar />
