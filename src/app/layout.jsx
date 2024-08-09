@@ -55,22 +55,18 @@ export default function RootLayout({ children }) {
               className="hidden lg:flex flex-col justify-start items-start w-full col-span-1 px-2 pb-10 gap-2"
               style={{ height: "calc(100vh - 4rem)" }}
             >
-              <AdSquareComponent />
-              <AdSquareComponent />
+              <AdSquareComponent adSlot={'8728353163'} />
             </div>
           </div>
           <MobileBottomNavbar />
           <ToastifyNotification />
         </div>
         <div className="w-full relative">
-          <AdHorizontalComponent />
-        </div>
-        <div className="w-full relative">
           <Footer />
         </div>
+        <GoogleAdsense pId={"1674144837923693"} />
       </body>
       <GoogleAnalytics gaId="G-G3NLQGJW6V" />
-      <GoogleAdsense pId={"1674144837923693"} />
     </html>
   );
 }

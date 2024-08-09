@@ -67,9 +67,9 @@ const ArticlePage = async ({ params }) => {
       <div className="no-scroll w-full px-2 pb-10 overflow-y-auto" style={{"height" : "calc(100vh - 4rem)"}}>
         <div className="w-full bg-white  flex flex-col justify-start items-center gap-1">
           <ArticleContent data={articleData} />
-          <AdHorizontalComponent />
+          <AdHorizontalComponent adSlot={'8467299603'} />
           <CommentSection entityId={params.articleId} />
-          <AdHorizontalComponent />
+          <AdHorizontalComponent adSlot={'1361468220'} />
         </div>
       </div>
     </>

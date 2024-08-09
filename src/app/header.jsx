@@ -10,7 +10,8 @@ import Image from "next/image";
 import MenuIcon from "@mui/icons-material/Menu";
 import { Drawer } from "@mui/material";
 import CloseIcon from "@mui/icons-material/Close";
-import ScheduleIcon from '@mui/icons-material/Schedule';
+import ScheduleIcon from "@mui/icons-material/Schedule";
+import FeaturedPlayListIcon from "@mui/icons-material/FeaturedPlayList";
 import { useState } from "react";
 
 export const HeaderComponent = () => {
@@ -47,6 +48,16 @@ export const HeaderComponent = () => {
           >
             <TrendingUpRoundedIcon fontSize="small" />
             POPULAR
+          </Link>
+          <Link
+            href={"/articles?page=1"}
+            className={`${
+              pathname.includes("/articles")
+                ? "bg-black text-white"
+                : "bg-white text-black"
+            } rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1 hover:shadow-[-1px_1px_1px_0px_black] shadow-[-1px_2px_3px_0px_black]`}
+          >
+            <FeaturedPlayListIcon fontSize="small" /> All Articles
           </Link>
           <Link
             href={"/constitution"}
@@ -137,6 +148,18 @@ export const MobileHeaderComponent = () => {
           </button>
           <button
             onClick={() => {
+              router.push("/articles?page=1");
+              setOpenMobileMenu(false);
+            }}
+            className={`${
+              pathname.includes("/articles") ? "underline" : ""
+            } px-2 py-2 font-semibold flex justify-end items-center gap-1`}
+          >
+            <FeaturedPlayListIcon fontSize="small" />
+            All Articles
+          </button>
+          <button
+            onClick={() => {
               router.push("/recents");
               setOpenMobileMenu(false);
             }}
@@ -175,8 +198,7 @@ export const MobileHeaderComponent = () => {
   return (
     <div className="fixed flex flex-col justify-center items-start lg:hidden w-full shadow-md border-b border-gray-300 z-10">
       <div className="w-full flex justify-between items-center relative bg-white py-2 px-6 h-20">
-        <Image src="/assets/fulllogo.svg" alt="logo" width={180}
-            height={100} />
+        <Image src="/assets/fulllogo.svg" alt="logo" width={180} height={100} />
         <div
           onClick={() => setOpenMobileMenu(true)}
           className="lg:hidden cursor-pointer "
@@ -215,6 +237,16 @@ export const MobileBottomNavbar = () => {
         } rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1 hover:shadow-[-1px_1px_1px_0px_black] shadow-[-1px_2px_3px_0px_black]`}
       >
         <TrendingUpRoundedIcon fontSize="small" />
+      </Link>
+      <Link
+        href={"/articles?page=1"}
+        className={`${
+          pathname.includes("/articles")
+            ? "bg-black text-white"
+            : "bg-white text-black"
+        } rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1 hover:shadow-[-1px_1px_1px_0px_black] shadow-[-1px_2px_3px_0px_black]`}
+      >
+        <FeaturedPlayListIcon fontSize="small" />
       </Link>
       <Link
         href={"/recents"}
