@@ -13,8 +13,7 @@ import { headers } from "next/headers";
 import WhyToUse from "@/components/WhyToUser";
 import GoogleAdsense from "@/components/GoogleAdsense";
 import Footer from "@/components/Footer";
-import AdSquareComponent from "@/components/AdSquareComponent";
-import AdHorizontalComponent from "@/components/AdHorizontalComponent";
+import AdComponent from "@/components/AdComponent";
 
 const inter = Inter({ subsets: ["latin"] });
 
@@ -55,8 +54,8 @@ export default function RootLayout({ children }) {
               className="hidden lg:flex flex-col justify-start items-start w-full col-span-1 px-2 pb-10 gap-2"
               style={{ height: "calc(100vh - 4rem)" }}
             >
-              <AdSquareComponent adSlot={'8728353163'} />
-              <AdSquareComponent adSlot={'6268984431'} />
+              <AdComponent adSlot={'8728353163'} />
+              <AdComponent adSlot={'6268984431'} />
             </div>
           </div>
           <MobileBottomNavbar />
