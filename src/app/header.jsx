@@ -57,7 +57,7 @@ export const HeaderComponent = () => {
                 : "bg-white text-black"
             } rounded-full px-6 py-2 font-semibold flex justify-center items-center gap-1 hover:shadow-[-1px_1px_1px_0px_black] shadow-[-1px_2px_3px_0px_black]`}
           >
-            <FeaturedPlayListIcon fontSize="small" /> All Articles
+            <FeaturedPlayListIcon fontSize="small" /> Articles
           </Link>
           <Link
             href={"/constitution"}
@@ -156,7 +156,7 @@ export const MobileHeaderComponent = () => {
             } px-2 py-2 font-semibold flex justify-end items-center gap-1`}
           >
             <FeaturedPlayListIcon fontSize="small" />
-            All Articles
+            Articles
           </button>
           <button
             onClick={() => {

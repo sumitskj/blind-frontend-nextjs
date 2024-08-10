@@ -30,6 +30,10 @@ export default function RootLayout({ children }) {
 
   return (
     <html lang="en">
+      <head>
+        <GoogleAdsense pId={"1674144837923693"} />
+        <GoogleAnalytics gaId="G-G3NLQGJW6V" />
+      </head>
       <body className={inter.className}>
         <div className="font-rubik w-full relative flex h-screen flex-col justify-start items-start gap-0 bg-indigo-50">
           <HeaderComponent />
@@ -54,8 +58,8 @@ export default function RootLayout({ children }) {
               className="hidden lg:flex flex-col justify-start items-start w-full col-span-1 px-2 pb-10 gap-2"
               style={{ height: "calc(100vh - 4rem)" }}
             >
-              <AdComponent adSlot={'8728353163'} />
-              <AdComponent adSlot={'6268984431'} />
+              <AdComponent adSlot={"8467299603"} />
+              <AdComponent adSlot={"8728353163"} />
             </div>
           </div>
           <MobileBottomNavbar />
@@ -64,9 +68,7 @@ export default function RootLayout({ children }) {
         <div className="w-full relative">
           <Footer />
         </div>
-        <GoogleAdsense pId={"1674144837923693"} />
       </body>
-      <GoogleAnalytics gaId="G-G3NLQGJW6V" />
     </html>
   );
 }

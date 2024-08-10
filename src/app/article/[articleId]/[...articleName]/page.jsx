@@ -27,7 +27,9 @@ const getArticleData = async (articleId) => {
 export async function generateMetadata({ params }) {
   // Fetch post data
   const articleData = await getArticleData(params.articleId);
-  let description = articleData.details ? articleData.details : articleData.title;
+  let description = articleData.details
+    ? articleData.details
+    : articleData.title;
   description = description.replace(/<[^>]*>?/gm, "").substring(0, 75);
 
   const metadata = {
@@ -64,12 +66,15 @@ const ArticlePage = async ({ params }) => {
 
   return (
     <>
-      <div className="no-scroll w-full px-2 pb-10 overflow-y-auto" style={{"height" : "calc(100vh - 4rem)"}}>
+      <div
+        className="no-scroll w-full px-2 pb-10 overflow-y-auto"
+        style={{ height: "calc(100vh - 4rem)" }}
+      >
         <div className="w-full bg-white  flex flex-col justify-start items-center gap-1">
           <ArticleContent data={articleData} />
-          <AdComponent adSlot={'8467299603'} />
+          <AdComponent adSlot={"1361468220"} />
           <CommentSection entityId={params.articleId} />
-          <AdComponent adSlot={'1361468220'} />
+          <AdComponent adSlot={"6268984431"} />
         </div>
       </div>
     </>

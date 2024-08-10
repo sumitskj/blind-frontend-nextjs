@@ -4,6 +4,7 @@ import CopyShareLinkComponent from "@/components/CopyShareLinkComponent";
 import GoBack from "@/components/GoBack";
 import MarkdownRenderer from "@/components/MarkdownRenderer";
 import UpdateArticleStorage from "./UpdateArticleStorage";
+import AdComponent from "@/components/AdComponent";
 
 const ArticleContent = ({ data }) => {
   return (
@@ -18,9 +19,7 @@ const ArticleContent = ({ data }) => {
           width={24}
           height={24}
         />
-        <div className="text-xs font-semibold">
-          /public
-        </div>
+        <div className="text-xs font-semibold">/public</div>
         <div className="font-bold text-gray-600 text-center items-center">
           <span>&#183;</span>
         </div>
@@ -39,6 +38,9 @@ const ArticleContent = ({ data }) => {
         </div>
       </div>
       <hr className="w-full pt-6" />
+      <div className="w-full relative">
+        <AdComponent adSlot={"1160026352"} />
+      </div>
       <div className="font-bold text-2xl">Solution</div>
       <div className="text-black rounded-3xl w-full">
         <pre className="text-sm whitespace-pre-wrap font-poppins">
