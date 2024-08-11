@@ -7,7 +7,10 @@ const FeedPostComponent = ({ data }) => {
   return (
     <Link
       key={data.id}
-      href={`/post/${data.id}`}
+      href={`/article/${data.id}/${data.title
+        .replace(/[^\w\s-]/g, "")
+        .replace(/\s+/g, "-")
+        .toLowerCase()}`}
       className="bg-white hover:shadow-lg border border-gray-200 rounded-lg flex w-full flex-col justify-start items-start relative p-6 gap-2 cursor-pointer"
     >
       <div className="flex justify-start items-center w-full relative gap-2">
@@ -33,7 +36,7 @@ const FeedPostComponent = ({ data }) => {
         <div className="post-content-wrapper">
           <div
             className="post-content text-gray-600 text-sm w-full"
-            dangerouslySetInnerHTML={{ __html: data.content }}
+            dangerouslySetInnerHTML={{ __html: data.details }}
           ></div>
         </div>
       </div>
@@ -47,7 +50,12 @@ const FeedPostComponent = ({ data }) => {
           />
           <div>{data.comments}</div>
         </div>
-        <CopyShareLinkComponent link={`/post/${data.id}`} />
+        <CopyShareLinkComponent
+          link={`/article/${data.id}/${data.title
+            .replace(/[^\w\s-]/g, "")
+            .replace(/\s+/g, "-")
+            .toLowerCase()}`}
+        />
       </div>
     </Link>
   );

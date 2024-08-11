@@ -16,7 +16,7 @@ const HomePage = () => {
   const getPosts = async (page, limit) => {
     try {
       const res = await fetchBackendApiWrapper(
-        `/post/public?limit=${limit}&offset=${page}&searchQuery=${search}`,
+        `/articles/public?limit=${limit}&offset=${page}&searchQuery=${search}`,
         {
           method: "GET",
           cache: "no-store",

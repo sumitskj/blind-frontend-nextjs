@@ -16,7 +16,7 @@ const PopularPage = () => {
   const getPosts = async (page, limit) => {
     try {
       const res = await fetchBackendApiWrapper(
-        `/post/public/popular?limit=${limit}&offset=${page}&searchQuery=${search}`,
+        `/articles/public/popular?limit=${limit}&offset=${page}&searchQuery=${search}`,
         {
           method: "GET",
           cache: "no-store",

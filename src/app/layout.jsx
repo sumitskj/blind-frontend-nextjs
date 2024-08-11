@@ -62,7 +62,7 @@ export default function RootLayout({ children }) {
               <AdComponent adSlot={"8728353163"} />
             </div>
           </div>
-          <MobileBottomNavbar />
+          {/* <MobileBottomNavbar /> */}
           <ToastifyNotification />
         </div>
         <div className="w-full relative">
