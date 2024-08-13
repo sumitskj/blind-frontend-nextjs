@@ -7,7 +7,7 @@ const FeedPostComponent = ({ data }) => {
   return (
     <Link
       key={data.id}
-      href={`/article/${data.id}/${data.title
+      href={`/article/${data.serial_id}/${data.title
         .replace(/[^\w\s-]/g, "")
         .replace(/\s+/g, "-")
         .toLowerCase()}`}
@@ -51,7 +51,7 @@ const FeedPostComponent = ({ data }) => {
           <div>{data.comments}</div>
         </div>
         <CopyShareLinkComponent
-          link={`/article/${data.id}/${data.title
+          link={`/article/${data.serial_id}/${data.title
             .replace(/[^\w\s-]/g, "")
             .replace(/\s+/g, "-")
             .toLowerCase()}`}
