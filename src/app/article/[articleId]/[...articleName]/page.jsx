@@ -39,7 +39,7 @@ export async function generateMetadata({ params }) {
       title: articleData.title,
       description: description,
       type: "article",
-      url: `https://boldena.com/article/${articleData.id}`,
+      url: `https://boldena.com/article/${articleData.serial_id}`,
       images: ["/opengraph-image.png"],
     },
   };
@@ -58,6 +58,9 @@ export async function generateMetadata({ params }) {
   };
 
   metadata.structuredData = structuredData;
+  metadata.alternates = {
+    canonical: `https://boldena.com/article/${articleData.serial_id}`,
+  }
   return metadata;
 }
 
