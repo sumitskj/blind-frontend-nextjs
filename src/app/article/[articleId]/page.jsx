@@ -58,6 +58,9 @@ export async function generateMetadata({ params }) {
   };
 
   metadata.structuredData = structuredData;
+  metadata.alternates = {
+    canonical: params.articleId.length === 36 ? `https://boldena.com/article/${articleData.serial_id}` : false,
+  }
   return metadata;
 }
 
